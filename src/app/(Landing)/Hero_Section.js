@@ -1,0 +1,304 @@
+"use client";
+
+import Image from "next/image";
+
+import { ArrowLeftRightIcon, MapPin, User } from "lucide-react";
+import TakeOffPlane from "../../../public/assets/images/TakeOffPlane.svg";
+import LandingPlane from "../../../public/assets/images/LandingPlane.svg";
+import DateFrom from "../../../public/assets/images/DateFrom.svg";
+import DateTo from "../../../public/assets/images/DateTo.svg";
+import TravelerIcon from "../../../public/assets/images/TravelerIcon.svg";
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+const HeroSection = () => {
+  const [departureDate, setDepartureDate] = useState(null);
+  const [returnDate, setReturnDate] = useState(null);
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [travelers, setTravelers] = useState(1);
+  const [travelClass, setTravelClass] = useState("Economy");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log({
+      from,
+      to,
+      departureDate,
+      returnDate,
+      travelers,
+      travelClass,
+    });
+  };
+
+  return (
+    <>
+      <div
+        className={`min-h-screen relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
+        bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 `}
+      >
+        <div className="h-full w-full flex flex-col justify-center items-center">
+          <div className="mt-10 h-full w-full flex flex-col justify-center items-center gap-2">
+            <h1 className="text-3xl lg:text-5xl font-semibold text-center font-jakarta">
+              Transforming African Travel
+            </h1>
+            <div className="relative pl-20">
+              <Image
+                src={"/assets/images/paper.svg"}
+                alt="banner-2"
+                height={10}
+                width={662}
+                className="relative h-20 bg-blend-multiply"
+              />
+              <p className="absolute top-7 left-36 z-[1px] text-black font-semibold text-xs lg:text-base  font-sans">
+                Hassle Free Local Payment Options with Lowest Prices!
+              </p>
+            </div>
+
+            <div className="w-full -mb-30 mt-10">
+              <p className="text-lg font-bold mb-6 font-sans">
+                Book your Trip now!
+              </p>
+
+              <form
+                onSubmit={handleSearch}
+                className="bg-white rounded-lg shadow-lg"
+              >
+                <div className="flex flex-col md:flex-row">
+                  {/* From Location */}
+                  <div className="flex items-center p-4 border-b md:border-b-0  border-gray-200 flex-1">
+                    <div className="mr-3"></div>
+                    <div>
+                      <label className="block text-xs text-gray-500">
+                        <Image src={TakeOffPlane} height={32} width={32} />
+                      </label>
+                      <div className="flex items-center mt-3.5 gap-3">
+                        <MapPin className="h-4 w-4 text-gray-500" />
+                        <input
+                          type="text"
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
+                          placeholder="City or Airport"
+                          value={from}
+                          onChange={(e) => setFrom(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Swap Icon */}
+                  <div className="hidden md:flex items-center justify-center p-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const temp = from;
+                        setFrom(to);
+                        setTo(temp);
+                      }}
+                      className="bg-[#EE5128] rounded-full p-2"
+                    >
+                      {/* <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                        />
+                      </svg> */}
+                      <ArrowLeftRightIcon className="h-5 w-5 text-white" />
+                    </button>
+                  </div>
+
+                  {/* To Location */}
+                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                    <div className="mr-3">
+                      {/* <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5 text-gray-500"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clipRule="evenodd"
+                        />
+                      </svg> */}
+                    </div>
+                    <div>
+                      <label className="block text-xs text-black">
+                        <Image src={LandingPlane} height={32} width={32} />
+                      </label>
+                      <div className="flex items-center mt-3.5 gap-3">
+                        <MapPin className="h-4 w-4 text-gray-500" />
+                        <input
+                          type="text"
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
+                          placeholder="City or Airport"
+                          value={to}
+                          onChange={(e) => setTo(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Departure Date */}
+                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                    <div className="mr-3"></div>
+                    <div className="relative w-full">
+                      <label className="block text-xs text-gray-500">
+                        <Image src={DateFrom} height={32} width={32} />
+                      </label>
+                      <div className="flex items-center mt-3.5">
+                        <DatePicker
+                          selected={departureDate}
+                          onChange={(date) => setDepartureDate(date)}
+                          placeholderText="Select date"
+                          className="block w-full placeholder:text-gray-400 text-black z-20 focus:outline-none"
+                          dateFormat="MMM d, yyyy"
+                          popperClassName="z-50"
+                          popperProps={{
+                            positionFixed: true,
+                          }}
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-black placeholder: absolute right-0 pointer-events-none"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Return Date */}
+                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                    <div className="mr-3"></div>
+                    <div className="relative w-full">
+                      <label className="block text-xs text-gray-500">
+                        <Image src={DateTo} height={32} width={32} />
+                      </label>
+                      <div className="flex items-center mt-3.5">
+                        <DatePicker
+                          selected={returnDate}
+                          onChange={(date) => setReturnDate(date)}
+                          placeholderText="Select date"
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
+                          dateFormat="MMM d, yyyy"
+                          minDate={departureDate}
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Travelers */}
+                  <div className="flex items-center relative p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                    <div className="mr-3"></div>
+                    <div>
+                      <label className="block text-xs text-gray-500">
+                        {/* {travelers} Traveler{travelers > 1 ? "s" : ""} */}
+                        <Image src={TravelerIcon} height={32} width={32} />
+                      </label>
+                      <div className="flex items-center mt-3.5 relative">
+                        <select
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none appearance-none bg-transparent"
+                          value={travelClass}
+                          onChange={(e) => setTravelClass(e.target.value)}
+                        >
+                          <option value="" className="text-gray-400">
+                            Select
+                          </option>
+                          <option value="Economy">Economy</option>
+                          <option value="Premium Economy">
+                            Premium Economy
+                          </option>
+                          <option value="Business">Business</option>
+                          <option value="First">First</option>
+                        </select>
+                        {/* <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg> */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Search Button */}
+                  <div className="p-4 md:p-0">
+                    <button
+                      type="submit"
+                      className="w-full text-2xl font-jakarta min-w-[200px] md:h-full bg-[#EE5128] hover:bg-orange-600 text-white font-semibold py-2 px-8 md:px-12 rounded-md md:rounded-none md:rounded-r-md"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <Image
+          src={`/assets/images/banner-bottom.png`}
+          alt="banner-bottom"
+          height={40}
+          width={662}
+          className="w-full absolute -bottom-[40px] object-cover h-20"
+        />
+      </div>
+    </>
+  );
+};
+
+export default HeroSection;
