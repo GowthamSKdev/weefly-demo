@@ -175,6 +175,8 @@ const AfricanExperience = () => {
             </div>
           </div>
         </div>
+        {/* pattern bg */}
+        <PatternBackground />
         {/* paper element */}
         <Image
           src="/assets/images/banner-bottom.png"
@@ -274,3 +276,68 @@ const AfricanExperience = () => {
 };
 
 export default AfricanExperience;
+
+const PatternBackground = () => {
+  return (
+    <>
+      <div className="">
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[5%] left-[4%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[4%] left-[20%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[4%] left-[25%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[3%] left-[30%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[10%] left-[28%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[10%] left-[32%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[10%] left-[36%] z-10"
+        />
+        <Image
+          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
+          height={43}
+          width={43}
+          alt="Decorative icon"
+          className="absolute top-[10%] left-[32%] z-10"
+        />
+      </div>
+    </>
+  );
+};

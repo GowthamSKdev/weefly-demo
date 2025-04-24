@@ -35,7 +35,7 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className={`min-h-dvh h-full relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
+        className={`min-h-screen h-full relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
         bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 overflow-hidden `}
       >
         <div className="h-full w-full flex flex-col justify-center items-center">
@@ -97,7 +97,7 @@ const HeroSection = () => {
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
-                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
                             value={from}
                             onChange={(e) => setFrom(e.target.value)}
                           >
@@ -182,7 +182,7 @@ const HeroSection = () => {
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
-                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
                             value={to}
                             onChange={(e) => setTo(e.target.value)}
                           >
@@ -222,14 +222,14 @@ const HeroSection = () => {
                             placeholderText="Date from"
                             className="block w-full placeholder:text-gray-400 text-black z-20 focus:outline-none"
                             dateFormat="MMM d, yyyy"
-                            popperClassName="z-50"
+                            popperClassName="z-[50px]"
                             popperProps={{
                               positionFixed: true,
                             }}
                           />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-gray-400 absolute left-[55%]  pointer-events-none"
+                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[55%]  pointer-events-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -268,7 +268,7 @@ const HeroSection = () => {
                           />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-gray-400 absolute left-[65%] pointer-events-none"
+                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[5%] pointer-events-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
