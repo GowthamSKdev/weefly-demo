@@ -97,16 +97,17 @@ export default function PaymentOptionSection() {
               well as debit/credit cards.
             </p>
           </div>
-          <div className="flex flex-wrap gap-16 justify-center items-center px-20 ">
-            {PaymentBrands.map((brand) => (
-              <Image
-                key={brand.id}
-                src={brand.src}
-                alt={brand.alt}
-                height={60}
-                width={60}
-                className="object-contain hover:scale-110 transition-transform duration-300 ease-in-out"
-              />
+          <div className="flex flex-wrap gap-16 justify-center items-center px-20">
+            {PaymentBrands.map((brand, index) => (
+              <div className="size-14 lg:size-16 relative" key={index}>
+                <Image
+                  key={brand.id}
+                  src={brand.src}
+                  alt={brand.alt}
+                  fill
+                  className="object-contain hover:scale-110 transition-transform duration-300 ease-in-out"
+                />
+              </div>
             ))}
           </div>
         </div>

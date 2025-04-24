@@ -6,7 +6,7 @@ function AioSection() {
       {/* Left Section */}
       <div className="w-full lg:w-1/2 flex justify-center items-center py-12">
         <div className="max-w-md w-full justify-center text-center lg:text-left lg:space-y-4">
-          <div className="flex justify-center lg:justify-start items-center gap-2">
+          <div className="flex justify-center lg:justify-start items-center gap-8">
             <p className="text-2xl font-sans">Coming soon</p>
             <p className="text-[72px] lg:text-[100px] font-semibold text-[#EE5128] font-jakarta">
               AiO

@@ -35,29 +35,29 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className={`min-h-screen relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
+        className={`min-h-dvh h-full relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
         bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 `}
       >
         <div className="h-full w-full flex flex-col justify-center items-center">
           <div className="mt-10 h-full w-full flex flex-col justify-center items-center gap-2">
-            <h1 className="text-3xl lg:text-5xl font-semibold text-center font-jakarta">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta">
               Transforming African Travel
             </h1>
-            <div className="relative pl-20">
+            <div className="relative pl-20 hidden xl:block">
               <Image
                 src={"/assets/images/paper.svg"}
                 alt="banner-2"
-                height={10}
+                height={171}
                 width={662}
-                className="relative h-20 bg-blend-multiply"
+                className="relative h-20 mix-blend-screen"
               />
-              <p className="absolute top-7 left-36 z-[1px] text-black font-semibold text-xs lg:text-base  font-sans">
+              <p className="absolute top-7 left-36 z-[1px] text-black font-semibold text-base font-sans">
                 Hassle Free Local Payment Options with Lowest Prices!
               </p>
             </div>
 
-            <div className="w-full -mb-30 mt-10">
-              <p className="text-lg font-bold mb-6 font-sans">
+            <div className="w-full -mb-30 mt-10 font-sans block z-10">
+              <p className="text-[18px] tracking-wider font-bold mb-6 font-sans">
                 Book your Trip now!
               </p>
 
@@ -71,17 +71,40 @@ const HeroSection = () => {
                     <div className="mr-3"></div>
                     <div>
                       <label className="block text-xs text-gray-500">
-                        <Image src={TakeOffPlane} height={32} width={32} />
+                        <Image
+                          src={TakeOffPlane}
+                          alt="TakeOffPlane"
+                          height={32}
+                          width={32}
+                        />
                       </label>
-                      <div className="flex items-center mt-3.5 gap-3">
+                      <div className="flex items-center mt-3.5">
                         <MapPin className="h-4 w-4 text-gray-500" />
-                        <input
+                        {/* <input
                           type="text"
                           className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
-                          placeholder="City or Airport"
+                          placeholder="Leaving from"
+                          value={dateFrom}
+                          onChange={(e) => setDateFrom(e.target.value)}
+                        /> */}
+                        <select
+                          name="leavingFrom"
+                          id="leavingFrom"
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
                           value={from}
                           onChange={(e) => setFrom(e.target.value)}
-                        />
+                        >
+                          <option value="" disabled>
+                            Leaving From
+                          </option>
+                          <option value="johannesburg">
+                            Johannesburg, South Africa
+                          </option>
+                          <option value="cape-town">
+                            Cape Town, South Africa
+                          </option>
+                          <option value="durban">Durban, South Africa</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -133,17 +156,40 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <label className="block text-xs text-black">
-                        <Image src={LandingPlane} height={32} width={32} />
+                        <Image
+                          src={LandingPlane}
+                          alt="LandingPlane"
+                          height={32}
+                          width={32}
+                        />
                       </label>
-                      <div className="flex items-center mt-3.5 gap-3">
+                      <div className="flex items-center mt-3.5">
                         <MapPin className="h-4 w-4 text-gray-500" />
-                        <input
+                        {/* <input
                           type="text"
                           className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
-                          placeholder="City or Airport"
+                          placeholder="Going to"
+                          value={dateTo}
+                          onChange={(e) => setDateTo(e.target.value)}
+                        /> */}
+                        <select
+                          name="leavingFrom"
+                          id="leavingFrom"
+                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
                           value={to}
                           onChange={(e) => setTo(e.target.value)}
-                        />
+                        >
+                          <option value="" disabled>
+                            Going to
+                          </option>
+                          <option value="johannesburg">
+                            Johannesburg, South Africa
+                          </option>
+                          <option value="cape-town">
+                            Cape Town, South Africa
+                          </option>
+                          <option value="durban">Durban, South Africa</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -151,15 +197,20 @@ const HeroSection = () => {
                   {/* Departure Date */}
                   <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
                     <div className="mr-3"></div>
-                    <div className="relative w-full">
+                    <div className="relative">
                       <label className="block text-xs text-gray-500">
-                        <Image src={DateFrom} height={32} width={32} />
+                        <Image
+                          src={DateFrom}
+                          alt="DateFrom"
+                          height={32}
+                          width={32}
+                        />
                       </label>
                       <div className="flex items-center mt-3.5">
                         <DatePicker
                           selected={departureDate}
                           onChange={(date) => setDepartureDate(date)}
-                          placeholderText="Select date"
+                          placeholderText="Date from"
                           className="block w-full placeholder:text-gray-400 text-black z-20 focus:outline-none"
                           dateFormat="MMM d, yyyy"
                           popperClassName="z-50"
@@ -169,7 +220,7 @@ const HeroSection = () => {
                         />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-black placeholder: absolute right-0 pointer-events-none"
+                          className="h-4 w-4 text-gray-400 absolute left-[55%]  pointer-events-none"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -190,20 +241,25 @@ const HeroSection = () => {
                     <div className="mr-3"></div>
                     <div className="relative w-full">
                       <label className="block text-xs text-gray-500">
-                        <Image src={DateTo} height={32} width={32} />
+                        <Image
+                          src={DateTo}
+                          alt="DateTo"
+                          height={32}
+                          width={32}
+                        />
                       </label>
                       <div className="flex items-center mt-3.5">
                         <DatePicker
                           selected={returnDate}
                           onChange={(date) => setReturnDate(date)}
-                          placeholderText="Select date"
+                          placeholderText="Return Date"
                           className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
                           dateFormat="MMM d, yyyy"
                           minDate={departureDate}
                         />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
+                          className="h-4 w-4 text-gray-400 absolute left-[55%] pointer-events-none"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -225,7 +281,12 @@ const HeroSection = () => {
                     <div>
                       <label className="block text-xs text-gray-500">
                         {/* {travelers} Traveler{travelers > 1 ? "s" : ""} */}
-                        <Image src={TravelerIcon} height={32} width={32} />
+                        <Image
+                          src={TravelerIcon}
+                          alt="TravelerIcon"
+                          height={32}
+                          width={32}
+                        />
                       </label>
                       <div className="flex items-center mt-3.5 relative">
                         <select

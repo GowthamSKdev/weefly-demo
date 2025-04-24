@@ -62,13 +62,21 @@ const Navbar = () => {
                   <button className="hidden" type="submit" />
                 </div>
               </form>
-              <button
-                className="bg-orange-600 px-3.5 py-2 flex items-center rounded-md gap-2"
-                suppressHydrationWarning
-              >
-                <UserCircle />
-                <span>Login/Register</span>
-              </button>
+              <div className="flex items-center gap-4">
+                <button
+                  className="bg-orange-600 px-3.5 py-2 flex items-center rounded-md gap-2"
+                  suppressHydrationWarning
+                >
+                  <UserCircle />
+                  <span>Login/Register</span>
+                </button>
+                <Image
+                  src="/assets/images/africaflag.png"
+                  height={39}
+                  width={39}
+                  alt="africa flag"
+                />
+              </div>
             </div>
           </div>
           <button

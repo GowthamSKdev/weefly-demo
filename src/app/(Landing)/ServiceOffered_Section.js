@@ -1,13 +1,20 @@
 import Image from "next/image";
 import Logo from "../../../public/assets/images/logo-small.svg";
+
 import ConciergeImg from "../../../public/assets/images/ServiceOffers/Concierge.svg";
+import ConciergeImgMask from "../../../public/assets/images/ServiceOffers/Concierge-orange.svg";
+
 import MoneyExchangeImg from "../../../public/assets/images/ServiceOffers/MoneyExchange.svg";
+import MoneyExchangeImgMask from "../../../public/assets/images/ServiceOffers/MoneyExchange-orange.svg";
 import ESimImg from "../../../public/assets/images/ServiceOffers/ESim.svg";
+import ESimImgMask from "../../../public/assets/images/ServiceOffers/ESim-orange.svg";
 import ExtraLuggage from "../../../public/assets/images/ServiceOffers/ExtraLuggage.svg";
+import ExtraLuggageMask from "../../../public/assets/images/ServiceOffers/ExtraLuggage-orange.svg";
 
 const Offers = [
   {
     image: "/assets/images/ServiceOffers/Tours.png",
+
     title: "Tours",
   },
   {
@@ -26,24 +33,28 @@ const Offers = [
 const Services = [
   {
     image: ConciergeImg,
+    maskImage: ConciergeImgMask,
     title: "Concierge",
     description:
       "Personalized assistance anytime, anywhere simplifying your lifestyle.",
   },
   {
     image: MoneyExchangeImg,
+    maskImage: MoneyExchangeImgMask,
     title: "Money exchange",
     description:
       "Fast, secure, and reliable currency exchange for global transactions.",
   },
   {
     image: ESimImg,
+    maskImage: ESimImgMask,
     title: "E-sim / Internet",
     description:
       "Stay connected globally with instant eSIM internet—fast, secure, reliable.",
   },
   {
     image: ExtraLuggage,
+    maskImage: ExtraLuggageMask,
     title: "Extra luggage",
     description:
       "Carry more with ease affordable extra luggage for your journey.",
@@ -59,8 +70,10 @@ function ServiceOfferedSection() {
           Services offered
         </h3>
         <div className="flex flex-col items-start font-sans font-normal text-[22px]">
-          <p className="font-semibold">Explore Africa with Ease</p>
-          <p className="text-base font-semibold text-black/50">
+          <p className="font-semibold xl:font-normal">
+            Explore Africa with Ease
+          </p>
+          <p className="text-base xl:text-[22px] font-semibold xl:font-normal text-black/50">
             Book Flights, Hotels, Cars, Trains & Events, Whether for Work or
             Play.
           </p>
@@ -82,7 +95,7 @@ function ServiceOfferedSection() {
                 className="object-cover object-center absolute inset-0 bg-gradient-to-b from-neutral-800 to-neutral-50 "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 from-30% via-black/30 to-black/0 z-10"></div>
-              <p className="font-medium text-white absolute bottom-6 left-6 text-2xl font-jakarta z-20 w-full">
+              <p className="font-semibold text-white absolute bottom-6 left-6 text-2xl font-jakarta z-20 w-full">
                 <span>{offer.title}</span>
               </p>
               <Image
@@ -104,21 +117,30 @@ function ServiceOfferedSection() {
               key={index}
             >
               {/* <div className="bg-[#EE5128] rounded-full p-3 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-white"> */}
-              <div className="bg-[#EE5128] rounded-full p-3 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-white">
+              <div className="bg-[#EE5128] rounded-full p-3 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-white relative">
                 <Image
                   src={service.image}
                   alt={service.title}
                   height={46}
                   width={46}
                   // className="text-red-50 drop-shadow-2xl"
-                  className="transition-all duration-300 ease-in-out group-hover:brightness-0 group-hover:invert"
+                  className="group-hover:opacity-0 opacity-100 transition-opacity duration-300 ease-in-out absolute"
                 />
+                <Image
+                  src={service.maskImage}
+                  alt={service.title}
+                  height={46}
+                  width={46}
+                  // className="text-red-50 drop-shadow-2xl"
+                  className=""
+                />
+
                 {/* {service.image} */}
               </div>
               <h3 className="text-2xl sm:text-[28px] font-jakarta text-left font-bold mt-11 mb-3">
                 {service.title}
               </h3>
-              <p className="font-sans text-lg sm:text-[21px] text-center leading-6">
+              <p className="font-sans text-lg sm:text-[21px] text-center font-normal leading-6">
                 {service.description}
               </p>
             </div>

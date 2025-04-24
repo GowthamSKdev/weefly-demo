@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-lato",
-  weight: ["400", "700"], // Add other weights as needed
+  weight: ["100", "300", "400", "700", "900"], // Add other weights as needed
   display: "swap",
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${plusJakarta.variable} ${lato.variable} antialiased`}
+      className={`${plusJakarta.variable} ${lato.variable}`}
       suppressHydrationWarning
     >
       <body>{children}</body>
