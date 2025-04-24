@@ -83,7 +83,11 @@ const Navbar = () => {
             className="lg:hidden cursor-pointer"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? (
+              <X />
+            ) : (
+              <Image src="/assets/images/menu.svg" height={24} width={24} />
+            )}
           </button>
           {/* <Menu
             className="lg:hidden cursor-pointer"

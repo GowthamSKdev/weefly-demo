@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function AioSection() {
   return (
-    <div className="flex flex-col lg:flex-row px-6 xl:px-40 justify-center items-center  lg:min-h-screen bg-white text-black font-sans">
+    <div className="flex flex-col lg:flex-row px-6 xl:px-40 justify-center items-center  lg:min-h-screen bg-white text-black font-sans overflow-hidden">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 flex justify-center items-center py-12">
         <div className="max-w-md w-full justify-center text-center lg:text-left lg:space-y-4">

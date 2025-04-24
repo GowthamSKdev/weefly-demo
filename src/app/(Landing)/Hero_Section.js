@@ -42,11 +42,11 @@ const HeroSection = () => {
           <div className="mt-10 h-full w-full flex flex-col justify-center items-center gap-2">
             <h1
               data-aos="fade-up"
-              className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta text-white"
+              className="text-4xl xl:text-5xl font-semibold text-center font-jakarta text-white"
             >
-              Transforming African Travel
+              Transforming <br className="sm:hidden" /> African Travel
             </h1>
-            <div data-aos="fade-up" className="relative pl-20 hidden xl:block">
+            <div data-aos="fade-up" className="relative pl-20 hidden lg:block">
               <Image
                 src={"/assets/images/paper.svg"}
                 alt="banner-2"
@@ -72,61 +72,62 @@ const HeroSection = () => {
                 className="bg-white rounded-lg shadow-lg"
               >
                 <div className="flex flex-col md:flex-row">
-                  {/* From Location */}
-                  <div className="flex items-center p-4 border-b md:border-b-0  border-gray-200 flex-1">
-                    <div className="mr-3"></div>
-                    <div>
-                      <label className="block text-xs text-gray-500">
-                        <Image
-                          src={TakeOffPlane}
-                          alt="TakeOffPlane"
-                          height={32}
-                          width={32}
-                        />
-                      </label>
-                      <div className="flex items-center mt-3.5">
-                        <MapPin className="h-4 w-4 text-gray-500" />
-                        {/* <input
+                  <div className="flex flex-row flex-1">
+                    {/* From Location */}
+                    <div className="flex items-center p-4 border-b md:border-b-0  border-gray-200 flex-1">
+                      <div className="mr-3"></div>
+                      <div>
+                        <label className="block text-xs text-gray-500">
+                          <Image
+                            src={TakeOffPlane}
+                            alt="TakeOffPlane"
+                            height={32}
+                            width={32}
+                          />
+                        </label>
+                        <div className="flex items-center mt-3.5">
+                          <MapPin className="h-4 w-4 text-gray-500" />
+                          {/* <input
                           type="text"
                           className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
                           placeholder="Leaving from"
                           value={dateFrom}
                           onChange={(e) => setDateFrom(e.target.value)}
                         /> */}
-                        <select
-                          name="leavingFrom"
-                          id="leavingFrom"
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
-                          value={from}
-                          onChange={(e) => setFrom(e.target.value)}
-                        >
-                          <option value="" disabled>
-                            Leaving From
-                          </option>
-                          <option value="johannesburg">
-                            Johannesburg, South Africa
-                          </option>
-                          <option value="cape-town">
-                            Cape Town, South Africa
-                          </option>
-                          <option value="durban">Durban, South Africa</option>
-                        </select>
+                          <select
+                            name="leavingFrom"
+                            id="leavingFrom"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
+                            value={from}
+                            onChange={(e) => setFrom(e.target.value)}
+                          >
+                            <option value="" disabled>
+                              Leaving From
+                            </option>
+                            <option value="johannesburg">
+                              Johannesburg, South Africa
+                            </option>
+                            <option value="cape-town">
+                              Cape Town, South Africa
+                            </option>
+                            <option value="durban">Durban, South Africa</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Swap Icon */}
-                  <div className="hidden md:flex items-center justify-center p-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        const temp = from;
-                        setFrom(to);
-                        setTo(temp);
-                      }}
-                      className="bg-[#EE5128] rounded-full p-2"
-                    >
-                      {/* <svg
+                    {/* Swap Icon */}
+                    <div className="md:flex items-center justify-center p-2 my-auto">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const temp = from;
+                          setFrom(to);
+                          setTo(temp);
+                        }}
+                        className="bg-[#EE5128] rounded-full p-2"
+                      >
+                        {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 text-white"
                         fill="none"
@@ -140,14 +141,14 @@ const HeroSection = () => {
                           d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
                         />
                       </svg> */}
-                      <ArrowLeftRightIcon className="h-5 w-5 text-white" />
-                    </button>
-                  </div>
+                        <ArrowLeftRightIcon className="h-5 w-5 text-white" />
+                      </button>
+                    </div>
 
-                  {/* To Location */}
-                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
-                    <div className="mr-3">
-                      {/* <svg
+                    {/* To Location */}
+                    <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                      <div className="mr-3">
+                        {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 text-gray-500"
                         viewBox="0 0 20 20"
@@ -159,158 +160,161 @@ const HeroSection = () => {
                           clipRule="evenodd"
                         />
                       </svg> */}
-                    </div>
-                    <div>
-                      <label className="block text-xs text-black">
-                        <Image
-                          src={LandingPlane}
-                          alt="LandingPlane"
-                          height={32}
-                          width={32}
-                        />
-                      </label>
-                      <div className="flex items-center mt-3.5">
-                        <MapPin className="h-4 w-4 text-gray-500" />
-                        {/* <input
+                      </div>
+                      <div>
+                        <label className="block text-xs text-black">
+                          <Image
+                            src={LandingPlane}
+                            alt="LandingPlane"
+                            height={32}
+                            width={32}
+                          />
+                        </label>
+                        <div className="flex items-center mt-3.5">
+                          <MapPin className="h-4 w-4 text-gray-500" />
+                          {/* <input
                           type="text"
                           className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
                           placeholder="Going to"
                           value={dateTo}
                           onChange={(e) => setDateTo(e.target.value)}
                         /> */}
-                        <select
-                          name="leavingFrom"
-                          id="leavingFrom"
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
-                          value={to}
-                          onChange={(e) => setTo(e.target.value)}
-                        >
-                          <option value="" disabled>
-                            Going to
-                          </option>
-                          <option value="johannesburg">
-                            Johannesburg, South Africa
-                          </option>
-                          <option value="cape-town">
-                            Cape Town, South Africa
-                          </option>
-                          <option value="durban">Durban, South Africa</option>
-                        </select>
+                          <select
+                            name="leavingFrom"
+                            id="leavingFrom"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
+                            value={to}
+                            onChange={(e) => setTo(e.target.value)}
+                          >
+                            <option value="" disabled>
+                              Going to
+                            </option>
+                            <option value="johannesburg">
+                              Johannesburg, South Africa
+                            </option>
+                            <option value="cape-town">
+                              Cape Town, South Africa
+                            </option>
+                            <option value="durban">Durban, South Africa</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Departure Date */}
-                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
-                    <div className="mr-3"></div>
-                    <div className="relative">
-                      <label className="block text-xs text-gray-500">
-                        <Image
-                          src={DateFrom}
-                          alt="DateFrom"
-                          height={32}
-                          width={32}
-                        />
-                      </label>
-                      <div className="flex items-center mt-3.5">
-                        <DatePicker
-                          selected={departureDate}
-                          onChange={(date) => setDepartureDate(date)}
-                          placeholderText="Date from"
-                          className="block w-full placeholder:text-gray-400 text-black z-20 focus:outline-none"
-                          dateFormat="MMM d, yyyy"
-                          popperClassName="z-50"
-                          popperProps={{
-                            positionFixed: true,
-                          }}
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-gray-400 absolute left-[55%]  pointer-events-none"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
+                  <div className="flex flex-1">
+                    {/* Departure Date */}
+                    <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                      <div className="mr-3"></div>
+                      <div className="relative">
+                        <label className="block text-xs text-gray-500">
+                          <Image
+                            src={DateFrom}
+                            alt="DateFrom"
+                            height={32}
+                            width={32}
                           />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Return Date */}
-                  <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
-                    <div className="mr-3"></div>
-                    <div className="relative w-full">
-                      <label className="block text-xs text-gray-500">
-                        <Image
-                          src={DateTo}
-                          alt="DateTo"
-                          height={32}
-                          width={32}
-                        />
-                      </label>
-                      <div className="flex items-center mt-3.5">
-                        <DatePicker
-                          selected={returnDate}
-                          onChange={(date) => setReturnDate(date)}
-                          placeholderText="Return Date"
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
-                          dateFormat="MMM d, yyyy"
-                          minDate={departureDate}
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-gray-400 absolute left-[55%] pointer-events-none"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
+                        </label>
+                        <div className="flex items-center mt-3.5">
+                          <DatePicker
+                            selected={departureDate}
+                            onChange={(date) => setDepartureDate(date)}
+                            placeholderText="Date from"
+                            className="block w-full placeholder:text-gray-400 text-black z-20 focus:outline-none"
+                            dateFormat="MMM d, yyyy"
+                            popperClassName="z-50"
+                            popperProps={{
+                              positionFixed: true,
+                            }}
                           />
-                        </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-400 absolute left-[55%]  pointer-events-none"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Return Date */}
+                    <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
+                      <div className="mr-3"></div>
+                      <div className="relative w-full">
+                        <label className="block text-xs text-gray-500">
+                          <Image
+                            src={DateTo}
+                            alt="DateTo"
+                            height={32}
+                            width={32}
+                          />
+                        </label>
+                        <div className="flex items-center mt-3.5">
+                          <DatePicker
+                            selected={returnDate}
+                            onChange={(date) => setReturnDate(date)}
+                            placeholderText="Return Date"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
+                            dateFormat="MMM d, yyyy"
+                            minDate={departureDate}
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-400 absolute left-[65%] pointer-events-none"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  {/* Travelers */}
-                  <div className="flex items-center relative p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
-                    <div className="mr-3"></div>
-                    <div>
-                      <label className="block text-xs text-gray-500">
-                        {/* {travelers} Traveler{travelers > 1 ? "s" : ""} */}
-                        <Image
-                          src={TravelerIcon}
-                          alt="TravelerIcon"
-                          height={32}
-                          width={32}
-                        />
-                      </label>
-                      <div className="flex items-center mt-3.5 relative">
-                        <select
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none appearance-none bg-transparent"
-                          value={travelClass}
-                          onChange={(e) => setTravelClass(e.target.value)}
-                        >
-                          <option value="" className="text-gray-400">
-                            Select
-                          </option>
-                          <option value="Economy">Economy</option>
-                          <option value="Premium Economy">
-                            Premium Economy
-                          </option>
-                          <option value="Business">Business</option>
-                          <option value="First">First</option>
-                        </select>
-                        {/* <svg
+                  <div className="flex flex-1 items-center sm:items-stretch">
+                    {/* Travelers */}
+                    <div className="flex items-center relative p-4 border-b-0 md:border-b-0 md:border-r border-gray-200 flex-1">
+                      <div className="mr-3"></div>
+                      <div>
+                        <label className="block text-xs text-gray-500">
+                          {/* {travelers} Traveler{travelers > 1 ? "s" : ""} */}
+                          <Image
+                            src={TravelerIcon}
+                            alt="TravelerIcon"
+                            height={32}
+                            width={32}
+                          />
+                        </label>
+                        <div className="flex items-center mt-3.5 relative">
+                          <select
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none appearance-none bg-transparent"
+                            value={travelClass}
+                            onChange={(e) => setTravelClass(e.target.value)}
+                          >
+                            <option value="" className="text-gray-400">
+                              Select
+                            </option>
+                            <option value="Economy">Economy</option>
+                            <option value="Premium Economy">
+                              Premium Economy
+                            </option>
+                            <option value="Business">Business</option>
+                            <option value="First">First</option>
+                          </select>
+                          {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
                           fill="none"
@@ -324,32 +328,33 @@ const HeroSection = () => {
                             d="M19 9l-7 7-7-7"
                           />
                         </svg> */}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Search Button */}
-                  <div className="p-4 md:p-0">
-                    <button
-                      type="submit"
-                      className="w-full text-2xl font-jakarta min-w-[200px] md:h-full bg-[#EE5128] hover:bg-orange-600 text-white font-semibold py-2 px-8 md:px-12 rounded-md md:rounded-none md:rounded-r-md"
-                    >
-                      Search
-                    </button>
+                    {/* Search Button */}
+                    <div className="p-4 my-auto md:my-0 md:p-0">
+                      <button
+                        type="submit"
+                        className="w-full text-2xl font-jakarta min-w-[200px] md:h-full bg-[#EE5128] hover:bg-orange-600 text-white font-semibold py-2 px-8 md:px-12 rounded-md md:rounded-none md:rounded-r-md"
+                      >
+                        Search
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>

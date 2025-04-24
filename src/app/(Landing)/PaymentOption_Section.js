@@ -182,7 +182,7 @@ const PaymentBrands = [
 
 export default function PaymentOptionSection() {
   return (
-    <div className="relative flex items-center justify-center px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40 py-16 sm:py-20 pb-[169px] bg-white">
+    <div className="relative flex items-center justify-center px-[12px] sm:px-8 md:px-10 lg:px-20 xl:px-40 py-16 sm:py-20 pb-[169px] bg-white">
       <div className="flex flex-col gap-10 sm:gap-14 w-full">
         <div className="text-center px-4 sm:px-8">
           <h2
