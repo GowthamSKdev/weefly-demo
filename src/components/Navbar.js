@@ -85,7 +85,12 @@ const Navbar = () => {
               {isMenuOpen ? (
                 <X />
               ) : (
-                <Image src="/assets/images/menu.svg" height={24} width={24} />
+                <Image
+                  src="/assets/images/menu.svg"
+                  height={20}
+                  width={20}
+                  alt="menu"
+                />
               )}
             </button>
           </div>
