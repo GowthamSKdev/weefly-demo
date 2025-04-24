@@ -176,7 +176,7 @@ const AfricanExperience = () => {
           </div>
         </div>
         {/* pattern bg */}
-        <PatternBackground />
+        {/* <PatternBackground /> */}
         {/* paper element */}
         <Image
           src="/assets/images/banner-bottom.png"
