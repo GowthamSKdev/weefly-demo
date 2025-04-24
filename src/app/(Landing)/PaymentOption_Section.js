@@ -185,10 +185,16 @@ export default function PaymentOptionSection() {
     <div className="relative flex items-center justify-center px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40 py-16 sm:py-20 pb-[169px] bg-white">
       <div className="flex flex-col gap-10 sm:gap-14 w-full">
         <div className="text-center px-4 sm:px-8">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-black font-jakarta">
+          <h2
+            data-aos="zoom-in-up"
+            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-black font-jakarta"
+          >
             Enjoy Secure & Flexible Payment Options
           </h2>
-          <p className="mt-4 text-sm sm:text-base lg:text-xl text-black/80 leading-relaxed sm:leading-8 xl:px-40">
+          <p
+            data-aos="zoom-in-up"
+            className="mt-4 text-sm sm:text-base lg:text-xl text-black/80 leading-relaxed sm:leading-8 xl:px-40"
+          >
             We make paying for your travel easy and stress free. Choose from a
             wide range of trusted local and international payment methods as
             well as debit/credit cards.

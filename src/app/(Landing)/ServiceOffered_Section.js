@@ -63,17 +63,23 @@ const Services = [
 
 function ServiceOfferedSection() {
   return (
-    <div className="px-10 lg:px-20 xl:px-40 py-28 bg-white text-black">
+    <div className="px-10 lg:px-20 xl:px-40 py-28 bg-white text-black overflow-hidden">
       {/* title section */}
       <div className="header flex flex-col items-start gap-3 lg:gap-5 mb-16">
-        <h3 className="font-jakarta font-bold text-2xl xl:text-[45px] text-[#EE5128]">
+        <h3
+          data-aos="fade-right"
+          className="font-jakarta font-bold text-2xl xl:text-[45px] text-[#EE5128]"
+        >
           Services offered
         </h3>
         <div className="flex flex-col items-start font-sans font-normal text-[22px]">
-          <p className="font-semibold xl:font-normal">
+          <p data-aos="fade-right" className="font-semibold xl:font-normal">
             Explore Africa with Ease
           </p>
-          <p className="text-base xl:text-[22px] font-semibold xl:font-normal text-black/50">
+          <p
+            data-aos="fade-right"
+            className="text-base xl:text-[22px] font-semibold xl:font-normal text-black/50"
+          >
             Book Flights, Hotels, Cars, Trains & Events, Whether for Work or
             Play.
           </p>
@@ -86,6 +92,7 @@ function ServiceOfferedSection() {
           {Offers.map((offer, index) => (
             <div
               key={index}
+              data-aos="zoom-out-left"
               className="sm:w-[48%] lg:w-[23.5%] xl:w-full w-full flex flex-col rounded-md shadow-md bg-white relative h-[400px] xl:hover:pr-40 transition-all duration-300 ease-in-out group overflow-hidden"
             >
               <Image
@@ -113,6 +120,7 @@ function ServiceOfferedSection() {
         <div className="bottom-section grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-3">
           {Services.map((service, index) => (
             <div
+              data-aos="zoom-in"
               className="flex flex-col items-center justify-center border-2 rounded-md border-[#EE5128] px-5 py-14 pb-28 hover:bg-[#EE5128] hover:text-white transition-all duration-300 ease-in-out group"
               key={index}
             >

@@ -21,6 +21,7 @@ export const metadata = {
 };
 
 import "react-datepicker/dist/react-datepicker.css";
+import "aos/dist/aos.css";
 
 export default function RootLayout({ children }) {
   return (

@@ -36,14 +36,17 @@ const HeroSection = () => {
     <>
       <div
         className={`min-h-dvh h-full relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
-        bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 `}
+        bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 overflow-hidden `}
       >
         <div className="h-full w-full flex flex-col justify-center items-center">
           <div className="mt-10 h-full w-full flex flex-col justify-center items-center gap-2">
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta text-white">
+            <h1
+              data-aos="fade-up"
+              className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta text-white"
+            >
               Transforming African Travel
             </h1>
-            <div className="relative pl-20 hidden xl:block">
+            <div data-aos="fade-up" className="relative pl-20 hidden xl:block">
               <Image
                 src={"/assets/images/paper.svg"}
                 alt="banner-2"
@@ -57,7 +60,10 @@ const HeroSection = () => {
             </div>
 
             <div className="w-full -mb-30 mt-10 font-sans block z-10">
-              <p className="text-[18px] tracking-wider font-bold mb-6 font-sans">
+              <p
+                data-aos="fade-left"
+                className="text-[18px] tracking-wider text-white font-bold mb-6 font-sans"
+              >
                 Book your Trip now!
               </p>
 
