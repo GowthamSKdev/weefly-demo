@@ -80,8 +80,8 @@ function ServiceOfferedSection() {
             data-aos="fade-right"
             className="text-base xl:text-[22px] font-semibold xl:font-normal text-black/50"
           >
-            Book Flights, Hotels, Cars, Trains & Events, Whether for Work or
-            Play.
+            Book Flights, Hotels, Cars, Trains & <br className="md:hidden" />{" "}
+            Events, Whether for Work or Play.
           </p>
         </div>
       </div>

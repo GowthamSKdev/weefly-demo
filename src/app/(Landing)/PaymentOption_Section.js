@@ -184,7 +184,7 @@ export default function PaymentOptionSection() {
   return (
     <div className="relative flex items-center justify-center px-[12px] sm:px-8 md:px-10 lg:px-20 xl:px-40 py-16 sm:py-20 pb-[169px] bg-white">
       <div className="flex flex-col gap-10 sm:gap-14 w-full">
-        <div className="text-center px-4 sm:px-8">
+        <div className="text-center">
           <h2
             data-aos="zoom-in-up"
             className="text-[31px] sm:text-3xl lg:text-4xl font-semibold text-black font-jakarta"
@@ -223,7 +223,7 @@ const LogoMarquee = ({ logos }) => {
   const secondRow = logos.slice(6);
 
   return (
-    <div className="px-2 sm:px-4 md:px-8 lg:px-10">
+    <div className="sm:px-4 md:px-8 lg:px-10">
       <div className="w-full overflow-hidden">
         {/* Row 1 */}
         <div className="mb-6 sm:mb-8">
