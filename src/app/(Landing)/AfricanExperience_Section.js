@@ -234,7 +234,7 @@ const AfricanExperience = () => {
           </h1>
         </div> */}
 
-        <div className="w-1/2 h-full font-jakarta relative">
+        <div className="w-full lg:w-1/2 h-full font-jakarta relative">
           <Image
             src={"/assets/images/AfricanExperienceBg.png"}
             height={800}

@@ -40,7 +40,7 @@ const HeroSection = () => {
       >
         <div className="h-full w-full flex flex-col justify-center items-center">
           <div className="mt-10 h-full w-full flex flex-col justify-center items-center gap-2">
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center font-jakarta text-white">
               Transforming African Travel
             </h1>
             <div className="relative pl-20 hidden xl:block">
