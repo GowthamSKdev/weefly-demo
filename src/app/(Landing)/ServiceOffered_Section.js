@@ -63,16 +63,16 @@ const Services = [
 
 function ServiceOfferedSection() {
   return (
-    <div className="px-10 lg:px-20 xl:px-40 py-28 bg-white text-black overflow-hidden">
+    <div className="px-4 lg:px-20 xl:px-40 py-28 bg-white text-black overflow-hidden">
       {/* title section */}
-      <div className="header flex flex-col items-start gap-3 lg:gap-5 mb-16">
+      <div className="header flex flex-col items-start gap-3 lg:gap-5 mb-[44px] lg:mb-16">
         <h3
           data-aos="fade-right"
-          className="font-jakarta font-bold text-2xl xl:text-[45px] text-[#EE5128]"
+          className="font-jakarta font-bold text-[30px] xl:text-[45px] text-[#EE5128]"
         >
           Services offered
         </h3>
-        <div className="flex flex-col items-start font-sans font-normal text-[22px]">
+        <div className="flex flex-col items-start font-sans font-normal text-[18px] lg:text-[22px]">
           <p data-aos="fade-right" className="font-semibold xl:font-normal">
             Explore Africa with Ease
           </p>

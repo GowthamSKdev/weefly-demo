@@ -187,13 +187,13 @@ export default function PaymentOptionSection() {
         <div className="text-center px-4 sm:px-8">
           <h2
             data-aos="zoom-in-up"
-            className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-black font-jakarta"
+            className="text-[31px] sm:text-3xl lg:text-4xl font-semibold text-black font-jakarta"
           >
             Enjoy Secure & Flexible Payment Options
           </h2>
           <p
             data-aos="zoom-in-up"
-            className="mt-4 text-sm sm:text-base lg:text-xl text-black/80 leading-relaxed sm:leading-8 xl:px-40"
+            className="mt-4 text-[17px] sm:text-base lg:text-xl text-black/80 leading-relaxed sm:leading-8 xl:px-40"
           >
             We make paying for your travel easy and stress free. Choose from a
             wide range of trusted local and international payment methods as

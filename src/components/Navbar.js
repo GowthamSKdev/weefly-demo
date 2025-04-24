@@ -79,16 +79,16 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <button
-            className="lg:hidden cursor-pointer"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            {isMenuOpen ? (
-              <X />
-            ) : (
-              <Image src="/assets/images/menu.svg" height={24} width={24} />
-            )}
-          </button>
+          <div className="flex gap-[12px] lg:hidden cursor-pointer">
+            <UserCircle />
+            <button className="" onClick={() => setIsMenuOpen((prev) => !prev)}>
+              {isMenuOpen ? (
+                <X />
+              ) : (
+                <Image src="/assets/images/menu.svg" height={24} width={24} />
+              )}
+            </button>
+          </div>
           {/* <Menu
             className="lg:hidden cursor-pointer"
             onClick={() => setIsMenuOpen((prev) => !prev)}
