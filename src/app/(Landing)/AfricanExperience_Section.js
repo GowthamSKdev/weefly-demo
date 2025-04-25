@@ -183,7 +183,7 @@ const AfricanExperience = () => {
           alt="Decorative bottom banner"
           height={40}
           width={662}
-          className="absolute bottom-[-25px] z-30 h-20 w-full object-cover border"
+          className="absolute bottom-[-40px] z-30 h-20 w-full object-cover border"
         />
       </div>
       {/* mobile section */}
@@ -268,7 +268,7 @@ const AfricanExperience = () => {
           alt="Decorative bottom banner"
           height={40}
           width={662}
-          className="absolute bottom-[-25px] z-30 h-20 w-full object-cover border"
+          className="absolute bottom-[-36px] z-30 h-20 w-full object-cover border"
         />
       </div>
     </>

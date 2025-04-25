@@ -97,7 +97,7 @@ const HeroSection = () => {
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
-                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none appearance-none"
                             value={from}
                             onChange={(e) => setFrom(e.target.value)}
                           >
@@ -182,7 +182,7 @@ const HeroSection = () => {
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
-                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
+                            className="block w-full placeholder:text-gray-400 text-black focus:outline-none appearance-none"
                             value={to}
                             onChange={(e) => setTo(e.target.value)}
                           >
@@ -229,7 +229,7 @@ const HeroSection = () => {
                           />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[55%]  pointer-events-none"
+                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[53%]  pointer-events-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -268,7 +268,7 @@ const HeroSection = () => {
                           />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[5%] pointer-events-none"
+                            className="h-4 w-4 text-gray-400 absolute left-[65%] sm:left-[55%] pointer-events-none"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"

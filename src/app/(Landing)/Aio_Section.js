@@ -5,7 +5,7 @@ function AioSection() {
     <div className="flex flex-col lg:flex-row px-6 xl:px-40 justify-center items-center  lg:min-h-screen bg-white text-black font-sans overflow-hidden">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 flex justify-center items-center py-12">
-        <div className="max-w-md w-full justify-center text-center lg:text-left lg:space-y-4">
+        <div className="max-w-md w-full justify-center text-center lg:text-left">
           <div
             data-aos="fade-right"
             className="flex justify-center lg:justify-start items-center gap-8"
@@ -17,19 +17,19 @@ function AioSection() {
           </div>
           <h2
             data-aos="fade-down"
-            className="text-[32px] lg:text-[40px] font-semibold font-jakarta"
+            className="text-[32px] lg:text-[40px] font-semibold font-jakarta leading-[150%] lg:mt-5"
           >
             WEEFLY TRAVEL AI
           </h2>
           <p
             data-aos="fade-down"
-            className="text-xl lg:text-3xl font-sans text-gray-700 font-normal"
+            className="text-xl lg:text-[30px] font-sans text-gray-700 font-normal lg:mb-3"
           >
             Your travel companion
           </p>
           <button
             data-aos="fade-down"
-            className="mt-10 lg:mt-14 px-8 py-2 text-lg font-jakarta font-semibold bg-[#EE5128] text-white rounded-md hover:bg-orange-700 transition"
+            className="mt-10 px-8 py-2 text-lg font-jakarta font-semibold bg-[#EE5128] text-white rounded-md hover:bg-orange-700 transition"
           >
             Learn more
           </button>
