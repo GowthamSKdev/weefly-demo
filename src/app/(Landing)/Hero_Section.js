@@ -58,6 +58,19 @@ const HeroSection = () => {
                 Hassle Free Local Payment Options with Lowest Prices!
               </p>
             </div>
+            <div data-aos="fade-up" className="relative block lg:hidden">
+              <Image
+                src={"/assets/images/paper-mobile.png"}
+                alt="banner-2"
+                height={100}
+                width={443}
+                className="relative h-20 -mb-10"
+              />
+              <p className="absolute top-5 left-13 leading-5 z-[1px] text-black font-semibold text-sm sm:text-base font-sans text-center">
+                Hassle Free Local Payment Options
+                <br className="block lg:hidden" /> with Lowest Prices!
+              </p>
+            </div>
 
             <div className="w-full -mb-30 mt-10 font-sans block z-10">
               <p
@@ -350,7 +363,7 @@ const HeroSection = () => {
                     <div className="p-4 my-auto md:my-0 md:p-0">
                       <button
                         type="submit"
-                        className="w-full text-2xl font-jakarta min-w-[200px] md:h-full bg-[#EE5128] hover:bg-orange-600 text-white font-semibold py-2 px-8 md:px-12 rounded-md md:rounded-none md:rounded-r-md"
+                        className="w-full text-2xl font-jakarta sm:min-w-[200px] max-w-[200px] md:h-full bg-[#EE5128] hover:bg-orange-600 text-white font-semibold py-2 px-8 md:px-12 rounded-md md:rounded-none md:rounded-r-md"
                       >
                         Search
                       </button>

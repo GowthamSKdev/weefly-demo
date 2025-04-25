@@ -121,7 +121,7 @@ function ServiceOfferedSection() {
           {Services.map((service, index) => (
             <div
               data-aos="zoom-in"
-              className="flex flex-col items-center justify-center border-2 rounded-md border-[#EE5128] px-5 py-14 pb-28 hover:bg-[#EE5128] hover:text-white transition-all duration-300 ease-in-out group"
+              className="flex flex-col items-center justify-center border-2 rounded-md border-[#EE5128] px-5 py-14 pb-28 hover:bg-[#EE5128] hover:shadow-2xl shadow-[#EE5128] hover:text-white transition-all duration-300 ease-in-out group"
               key={index}
             >
               {/* <div className="bg-[#EE5128] rounded-full p-3 flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-white"> */}
