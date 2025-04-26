@@ -103,13 +103,6 @@ const HeroSection = () => {
                         </label>
                         <div className="flex items-center mt-3.5">
                           <MapPin className="h-4 w-4 text-gray-500" />
-                          {/* <input
-                          type="text"
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none z-10"
-                          placeholder="Leaving from"
-                          value={dateFrom}
-                          onChange={(e) => setDateFrom(e.target.value)}
-                        /> */}
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
@@ -163,20 +156,7 @@ const HeroSection = () => {
 
                     {/* To Location */}
                     <div className="flex items-center p-4 border-b md:border-b-0 md:border-r border-gray-200 flex-1">
-                      <div className="mr-3">
-                        {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-gray-500"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg> */}
-                      </div>
+                      <div className="mr-3"></div>
                       <div>
                         <label className="block text-xs text-black">
                           <Image
@@ -188,13 +168,6 @@ const HeroSection = () => {
                         </label>
                         <div className="flex items-center mt-3.5">
                           <MapPin className="h-4 w-4 text-gray-500" />
-                          {/* <input
-                          type="text"
-                          className="block w-full placeholder:text-gray-400 text-black focus:outline-none"
-                          placeholder="Going to"
-                          value={dateTo}
-                          onChange={(e) => setDateTo(e.target.value)}
-                        /> */}
                           <select
                             name="leavingFrom"
                             id="leavingFrom"
@@ -330,20 +303,6 @@ const HeroSection = () => {
                             <option value="Business">Business</option>
                             <option value="First">First</option>
                           </select>
-                          {/* <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg> */}
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-4 w-4 text-gray-400 absolute right-0 pointer-events-none"

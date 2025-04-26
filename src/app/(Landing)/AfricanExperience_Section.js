@@ -86,15 +86,6 @@ const AfricanExperience = () => {
     <>
       <div className="relative hidden lg:block">
         <div className="overflow-hidden min-h-screen h-full w-full bg-gradient-to-r from-[#fad9cf] to-[#f28c72] relative text-black font-sans flex flex-col lg:flex-row items-center ">
-          {/* <div className="w-full lg:w-1/2 h-full font-sans relative py-12 lg:py-0">
-          <div className="absolute mix-blend-plus-lighter -left-20 -top-38 opacity-50">
-            <div className="w-96 h-96 bg-orange-200 rounded-full blur-3xl"></div>
-          </div>
-          <h1 className="font-black tracking-tight text-black text-4xl lg:text-6xl xl:text-7xl leading-tight z-10 relative">
-            Live the <br /> African <br /> Experience
-          </h1>
-        </div> */}
-
           <div className="w-full bg-gradient-to-t from-[#fad9cf] to-[#f28c72] relative text-black font-sans flex items-center bg-[url('/assets/images/africanExperiences/AfricanExperienceDesktopBg.svg')] bg-no-repeat bg-center bg-cover px-8 lg:px-20">
             <div className="w-full lg:w-1/2 h-full font-jakarta relative">
               <Image
@@ -177,8 +168,7 @@ const AfricanExperience = () => {
             </div>
           </div>
         </div>
-        {/* pattern bg */}
-        {/* <PatternBackground /> */}
+
         {/* paper element */}
         <Image
           src="/assets/images/banner-bottom.png"
@@ -197,31 +187,22 @@ const AfricanExperience = () => {
                 src={"/assets/images/AfricanExperienceFullBg.png"}
                 alt="African Experience Background"
                 className="mix-blend-screen opacity-50 absolute left-0 h-full w-full scale-125 inset-0 sm:scale-[130%] object-contain"
-                // height={1000}
-                // width={1500}
                 fill
               />
               <h1 className="font-extrabold font-jakarta text-[36px] leading-[150%] stroke-black stroke-3">
                 Live the <br /> African <br /> Experience
               </h1>
-              {/* <h1 className="absolute font-black text-[33px] leading-[150%] z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              Live the <br /> African <br /> Experience
-            </h1> */}
             </div>
             <div className="mx-auto relative w-full flex flex-1">
               <div className="relative w-full">
                 {/* Center text */}
                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                  {/* <p className="text-center text-xl lg:text-3xl font-medium max-w-xs">
-                Discover Local Options, <br /> Experience the Unexplored!
-              </p> */}
                   <p className="text-center text-base">
                     Discover Local Options, <br /> Experience the Unexplored!
                   </p>
                 </div>
 
                 {/* Circle outline */}
-                {/* <div className="absolute inset-0 border-2 border-orange-400 rounded-full"></div> */}
 
                 {/* Icons positioned around the circle */}
                 {AfricanExperienceData.map((item, index) => {
@@ -318,68 +299,3 @@ const AfricanExperience = () => {
 };
 
 export default AfricanExperience;
-
-const PatternBackground = () => {
-  return (
-    <>
-      <div className="">
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[5%] left-[4%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[4%] left-[20%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[4%] left-[25%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[3%] left-[30%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[10%] left-[28%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[10%] left-[32%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[10%] left-[36%] z-10"
-        />
-        <Image
-          src={"/assets/images/africanExperiences/foregroundIcons/icon (1).svg"}
-          height={43}
-          width={43}
-          alt="Decorative icon"
-          className="absolute top-[10%] left-[32%] z-10"
-        />
-      </div>
-    </>
-  );
-};
