@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 import HeroSection from "./Hero_Section";
 import ServiceOfferedSection from "./ServiceOffered_Section";
 import PaymentOptionSection from "./PaymentOption_Section";
@@ -34,7 +34,7 @@ export default function Home() {
       <ExploreAfrica />
       <OurStory_Section />
       <Subscribe_Section />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
