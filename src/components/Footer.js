@@ -87,7 +87,7 @@ export default function Footer() {
             },
           ].map((section, idx) => (
             <div
-              key={section.title}
+              key={idx}
               onMouseEnter={() => handleMouseEnter(idx)}
               onMouseLeave={handleMouseLeave}
               className="bg-gray-50 rounded shadow-sm overflow-hidden transition-all duration-500 ease-in-out"
