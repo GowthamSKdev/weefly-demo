@@ -35,7 +35,7 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className={`min-h-screen h-full relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
+        className={`min-h-screen relative bg-white/10 bg-[url('/assets/images/banner-img.png')]
         bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center px-4 lg:px-10 xl:px-20 overflow-hidden `}
       >
         <div className="h-full w-full flex flex-col justify-center items-center">
@@ -58,7 +58,10 @@ const HeroSection = () => {
                 Hassle Free Local Payment Options with Lowest Prices!
               </p>
             </div>
-            <div data-aos="fade-up" className="relative block lg:hidden">
+            <div
+              data-aos="fade-up"
+              className="relative block lg:hidden mt-4 mb-4"
+            >
               <Image
                 src={"/assets/images/paper-mobile.png"}
                 alt="banner-2"
@@ -379,7 +382,7 @@ const HeroSection = () => {
           alt="banner-bottom"
           height={40}
           width={662}
-          className="w-full absolute -bottom-[40px] object-cover h-20"
+          className="w-full absolute -bottom-[26px] md:-bottom-[40px] object-cover h-20"
         />
       </div>
     </>
