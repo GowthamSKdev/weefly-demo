@@ -116,8 +116,8 @@ export default function Footer() {
                   </ul>
                 ) : section.isIcons ? (
                   <div className="flex items-center gap-5 text-[#0A0A23] text-xl">
-                    {section.content.map((Icon, i) => (
-                      <a key={i} href="#" className="hover:text-black">{Icon}</a>
+                    {section.content.map((IconElement, i) => (
+                      <a key={i} href="#" className="hover:text-black">{IconElement}</a>
                     ))}
                   </div>
                 ) : (
