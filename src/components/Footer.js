@@ -1,28 +1,205 @@
 
+// 'use client';
+
+// import Image from "next/image";
+// import {
+//   FaFacebookF,
+//   FaXTwitter,
+//   FaLinkedinIn,
+//   FaInstagram,
+// } from "react-icons/fa6";
+// import { useState, useEffect, useRef } from "react";
+
+// export default function Footer() {
+//   const [openIndex, setOpenIndex] = useState(null);
+//   let openTimer = null;
+//   let closeTimer = null;
+
+//   const handleMouseEnter = (idx) => {
+//     clearTimeout(closeTimer);
+//     openTimer = setTimeout(() => setOpenIndex(idx), 150);
+//   };
+
+//   const handleMouseLeave = () => {
+//     clearTimeout(openTimer);
+//     closeTimer = setTimeout(() => setOpenIndex(null), 300);
+//   };
+
+//   // Scroll animation
+//   const footerRef = useRef(null);
+//   const [isVisible, setIsVisible] = useState(false);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setIsVisible(true);
+//         } else {
+//           setIsVisible(false);
+//         }
+//       },
+//       { threshold: 0.1 }
+//     );
+//     if (footerRef.current) observer.observe(footerRef.current);
+//     return () => observer.disconnect();
+//   }, []);
+
+//   return (
+//     <footer
+//       ref={footerRef}
+//       className={`bg-white text-[#222] px-6 sm:px-8 md:px-22 pt-10 pb-6 ml-4 transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] transform ${
+//         isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-[0.97] translate-y-8'
+//       }`}
+//     >
+//       <div className="">
+//         <div className="mb-8 flex justify-center md:justify-start">
+//           <Image
+//             src="/assets/footer/weefly-logo.png"
+//             alt="WeeFly Logo"
+//             width={130}
+//             height={40}
+//             className="object-contain"
+//           />
+//         </div>
+
+//         <div className="space-y-4 md:hidden">
+//           {[
+//             {
+//               title: "Quick links",
+//               content: ["Home", "Flights", "Hotels", "Destinations", "About us", "Contact us"],
+//               isLinks: true
+//             },
+//             {
+//               title: "Top Destination",
+//               content: ["Tanzania", "South Africa", "Seychelles", "Morocco", "Zimbabwe", "Rwanda"],
+//               isLinks: true
+//             },
+//             {
+//               title: "Contact Us",
+//               content: ["Mobile: +(1) 123 456 7890", "Email: weefly@gmail.com"],
+//               isLinks: false
+//             },
+//             {
+//               title: "Follow us",
+//               content: [<FaFacebookF />, <FaXTwitter />, <FaLinkedinIn />, <FaInstagram />],
+//               isLinks: false,
+//               isIcons: true
+//             },
+//           ].map((section, idx) => (
+//             <div
+//               key={idx}
+//               onMouseEnter={() => handleMouseEnter(idx)}
+//               onMouseLeave={handleMouseLeave}
+//               className="bg-gray-50 rounded shadow-sm overflow-hidden transition-all duration-500 ease-in-out"
+//             >
+//               <div className="w-full py-3 px-4 flex justify-between items-center font-jakarta font-bold text-base cursor-default">
+//                 <span>{section.title}</span>
+//                 <span
+//                   className={`transform transition-transform duration-300 ${
+//                     openIndex === idx ? 'rotate-180' : 'rotate-0'
+//                   }`}
+//                 >
+//                   ▼
+//                 </span>
+//               </div>
+
+//               <div
+//                 className={`px-4 font-lato transition-all duration-500 ease-in-out ${
+//                   openIndex === idx ? "max-h-96 opacity-100 pt-2 pb-4" : "max-h-0 opacity-0"
+//                 }`}
+//               >
+//                 {section.isLinks ? (
+//                   <ul className="space-y-2 text-[15px] text-[#444]">
+//                     {section.content.map(item => (
+//                       <li key={item}><a href="#" className="hover:text-black">{item}</a></li>
+//                     ))}
+//                   </ul>
+//                 ) : section.isIcons ? (
+//                   <div className="flex items-center gap-5 text-[#0A0A23] text-xl">
+//                     {section.content.map((IconElement, i) => (
+//                       <a key={i} href="#" className="hover:text-black">{IconElement}</a>
+//                     ))}
+//                   </div>
+//                 ) : (
+//                   <ul className="space-y-2 text-[15px] text-[#444]">
+//                     {section.content.map(item => (
+//                       <li key={item}>{item}</li>
+//                     ))}
+//                   </ul>
+//                 )}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         <div className="hidden md:grid grid-cols-4 gap-6 sm:gap-8 md:gap-12 items-start">
+//           <div className="flex flex-col items-start text-left">
+//             <h4 className="text-lg font-bold font-jakarta mb-3">Quick links</h4>
+//             <ul className="space-y-2 text-[15px] text-[#444] font-lato">
+//               {["Home", "Flights", "Hotels", "Destinations", "About us", "Contact us"].map(item => (
+//                 <li key={item}><a href="#" className="hover:text-black">{item}</a></li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           <div className="flex flex-col items-start text-left">
+//             <h4 className="text-lg font-bold font-jakarta mb-3">Top Destination</h4>
+//             <ul className="space-y-2 text-[15px] text-[#444] font-lato">
+//               {["Tanzania", "South Africa", "Seychelles", "Morocco", "Zimbabwe", "Rwanda"].map(item => (
+//                 <li key={item}><a href="#" className="hover:text-black">{item}</a></li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           <div className="flex flex-col items-start text-left">
+//             <h4 className="text-lg font-bold font-jakarta mb-3">Mobile number</h4>
+//             <p className="text-[15px] text-[#444] font-lato mb-5">+(1) 123 456 7890</p>
+//             <h4 className="text-lg font-bold font-jakarta mb-2">Email Support</h4>
+//             <p className="text-[15px] text-[#444] font-lato">weefly@gmail.com</p>
+//           </div>
+
+//           <div className="flex flex-col items-start text-left">
+//             <h4 className="text-lg font-bold font-jakarta mb-3">Follow us</h4>
+//             <div className="flex items-center gap-5 text-[#0A0A23] text-xl">
+//               <a href="#"><FaFacebookF /></a>
+//               <a href="#"><FaXTwitter /></a>
+//               <a href="#"><FaLinkedinIn /></a>
+//               <a href="#"><FaInstagram /></a>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="mt-10 pt-6 border-t border-gray-200 text-center text-[14px] text-[#444] font-lato">
+//           Copyright © 2025 weefly. All rights reserved
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// }
 'use client';
 
 import Image from "next/image";
 import {
   FaFacebookF,
-  FaXTwitter,
+  FaTwitter,  // Fixed import
   FaLinkedinIn,
   FaInstagram,
-} from "react-icons/fa6";
+} from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 
 export default function Footer() {
   const [openIndex, setOpenIndex] = useState(null);
-  let openTimer = null;
-  let closeTimer = null;
+  const openTimer = useRef(null);  // Changed to useRef
+  const closeTimer = useRef(null); // Changed to useRef
 
   const handleMouseEnter = (idx) => {
-    clearTimeout(closeTimer);
-    openTimer = setTimeout(() => setOpenIndex(idx), 150);
+    clearTimeout(closeTimer.current);
+    openTimer.current = setTimeout(() => setOpenIndex(idx), 150);
   };
 
   const handleMouseLeave = () => {
-    clearTimeout(openTimer);
-    closeTimer = setTimeout(() => setOpenIndex(null), 300);
+    clearTimeout(openTimer.current);
+    closeTimer.current = setTimeout(() => setOpenIndex(null), 300);
   };
 
   // Scroll animation
@@ -41,6 +218,8 @@ export default function Footer() {
       { threshold: 0.1 }
     );
     if (footerRef.current) observer.observe(footerRef.current);
+
+    // Cleanup observer
     return () => observer.disconnect();
   }, []);
 
@@ -63,7 +242,7 @@ export default function Footer() {
         </div>
 
         <div className="space-y-4 md:hidden">
-          {[
+          {[ 
             {
               title: "Quick links",
               content: ["Home", "Flights", "Hotels", "Destinations", "About us", "Contact us"],
@@ -81,7 +260,7 @@ export default function Footer() {
             },
             {
               title: "Follow us",
-              content: [<FaFacebookF />, <FaXTwitter />, <FaLinkedinIn />, <FaInstagram />],
+              content: [<FaFacebookF />, <FaTwitter />, <FaLinkedinIn />, <FaInstagram />],
               isLinks: false,
               isIcons: true
             },
@@ -95,18 +274,14 @@ export default function Footer() {
               <div className="w-full py-3 px-4 flex justify-between items-center font-jakarta font-bold text-base cursor-default">
                 <span>{section.title}</span>
                 <span
-                  className={`transform transition-transform duration-300 ${
-                    openIndex === idx ? 'rotate-180' : 'rotate-0'
-                  }`}
+                  className={`transform transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : 'rotate-0'}`}
                 >
                   ▼
                 </span>
               </div>
 
               <div
-                className={`px-4 font-lato transition-all duration-500 ease-in-out ${
-                  openIndex === idx ? "max-h-96 opacity-100 pt-2 pb-4" : "max-h-0 opacity-0"
-                }`}
+                className={`px-4 font-lato transition-all duration-500 ease-in-out ${openIndex === idx ? "max-h-96 opacity-100 pt-2 pb-4" : "max-h-0 opacity-0"}`}
               >
                 {section.isLinks ? (
                   <ul className="space-y-2 text-[15px] text-[#444]">
@@ -116,11 +291,10 @@ export default function Footer() {
                   </ul>
                 ) : section.isIcons ? (
                   <div className="flex items-center gap-5 text-[#0A0A23] text-xl">
-  {section.content.map((IconElement, i) => (
-    <a key={i} href="#" className="hover:text-black">{IconElement}</a>
-  ))}
-</div>
-
+                    {section.content.map((IconElement, i) => (
+                      <a key={i} href="#" className="hover:text-black">{IconElement}</a>
+                    ))}
+                  </div>
                 ) : (
                   <ul className="space-y-2 text-[15px] text-[#444]">
                     {section.content.map(item => (
@@ -163,7 +337,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold font-jakarta mb-3">Follow us</h4>
             <div className="flex items-center gap-5 text-[#0A0A23] text-xl">
               <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaXTwitter /></a>
+              <a href="#"><FaTwitter /></a>
               <a href="#"><FaLinkedinIn /></a>
               <a href="#"><FaInstagram /></a>
             </div>
