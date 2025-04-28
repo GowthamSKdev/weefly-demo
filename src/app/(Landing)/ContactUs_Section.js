@@ -191,7 +191,7 @@ export default function TravelSection() {
 
             {/* Contact Us Button */}
             <div className="relative w-full max-w-[370px] mx-auto">
-              <div className="absolute -top-9 sm:-bottom-12 right-6 sm:right-6 z-30">
+              <div className="absolute -top-9 sm:-bottom-12 right-8 sm:right-6 z-30">
                 <button className="bg-[#F15623] text-white px-4 sm:px-5 py-2 rounded-full font-medium hover:bg-[#d54417] transition shadow font-lato text-xs sm:text-sm">
                   Contact us
                 </button>
